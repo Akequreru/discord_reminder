@@ -14,7 +14,8 @@ module.exports = {
                 .addChoices(
                     { name: 'なし', value: 'none' },
                     { name: '@everyone', value: 'everyone' }
-                )),
+                ))
+        .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 
     async execute(interaction) {
         const timeInput = interaction.options.getString('time');
