@@ -22,7 +22,7 @@ SQLite を利用した予定管理と、自動リマインド、そして Puppet
 | `/change` | 指定した日時のスケジュールを変更します。 | |
 | `/delete` | 指定した日時のスケジュールを削除します。 | |
 | `/calendar` | 指定した月の予定付きカレンダー画像を生成します。 | 年・月を選択可能（デフォルトは今月） |
-| `/remind-set` | 毎日の自動リマインドを有効化・設定します。 | 管理者権限が必要 |
+| `/remind-set` | 毎日の自動リマインドを有効化・設定します。時間設定も可能。 | 管理者権限が必要 |
 | `/remind-off` | 自動リマインドを停止（無効化）します。 | 管理者権限が必要 |
 
 ---
@@ -39,29 +39,34 @@ SQLite を利用した予定管理と、自動リマインド、そして Puppet
 リポジトリをクローンし、依存ライブラリを一括インストールします。
 
 ```bash
-git clone [https://github.com/あなたのユーザー名/リポジトリ名.git](https://github.com/あなたのユーザー名/リポジトリ名.git)
-cd リポジトリ名
+git clone [https://github.com/Akequreru/discord_scheduler_reminder_calendar_bot.git](https://github.com/Akequreru/discord_scheduler_reminder_calendar_bot.git)
+cd discord_scheduler_reminder_calendar_bot
 npm install
+```
 
 ### 3.設定ファイルの作成
 プロジェクトのルートディレクトリに config.json を作成し、Discord Developer Portal から取得した情報を記入してください。
 
+```bash
 {
   "token": "YOUR_DISCORD_BOT_TOKEN",
   "clientId": "YOUR_CLIENT_ID"
 }
+```
 
 ⚠️ 注意: config.json や database.sqlite は機密情報やデータを含むため、Git の追記対象から除外されています（.gitignore 設定済み）。
 
 ### 4. コマンドの登録と起動
 Discord サーバーにスラッシュコマンドを登録（グローバルデプロイ）し、ボットを起動します。
 
-Bash
+```bash
 # コマンドの登録（初回やコマンド変更時のみでOK）
 node deploy-commands.js
 
 # ボットの起動
 node index.js
+```
+
 📝 技術スタック
 - Runtime: Node.js
 - Library: Discord.js (v14)
