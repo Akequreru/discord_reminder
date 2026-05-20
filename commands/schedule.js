@@ -40,6 +40,7 @@ module.exports={
         // 時間を ":" で分けて、それぞれを数値として取得
         const [hours, minutes] = inputTime.split(':').map(Number);
 
+        const finalMinutes = minutes || 0;
         // 再び 00:00 形式に変換（ゼロ埋め）
         const time = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
 
