@@ -63,7 +63,7 @@ module.exports={
                     let response = `${date} ${time}には既に予定があります。\n`
                     // 予定をリスト形式に整形
                     rows.forEach(row => {
-                        response += `・登録されている予定：${row.content}\n\n【/change】で予定を変更できます。\n【/delete】で予定を削除できます。`;
+                        response += `・登録されている予定：${row.content}\n\n予定を変更したい場合は/changeを、削除したい場合は/deleteをご利用ください`;
                     });
 
                     await interaction.reply(response);
