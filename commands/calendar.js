@@ -187,7 +187,9 @@ module.exports = {
             `;
 
             // 5. Puppeteerレンダリング (変更なし)
-            const browser = await puppeteer.launch({ headless: true });
+            const browser = await puppeteer.launch({
+                args: ['--no-sandbox', '--disable-setuid-sandbox']
+            });
             const page = await browser.newPage();
             await page.setViewport({ width: 1040, height: 950 });
             await page.setContent(htmlContent);
