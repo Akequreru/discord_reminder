@@ -1,4 +1,4 @@
-# 📅 Discord Schedule & Calendar Bot
+# 📅 Discord Scheduler, reminder & Calendar Bot
 
 SQLite を利用した予定管理と、自動リマインド、そして Puppeteer を使った美しい今月のカレンダー画像生成機能を備えた Discord ボットです。
 
