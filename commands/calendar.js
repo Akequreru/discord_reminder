@@ -171,15 +171,15 @@ module.exports = {
                 </style>
             </head>
             <body>
-                <div class="calendar-title">${year}年 ${selectedMonth}月</div>
+                <div class="calendar-title">${year}.  ${selectedMonth}</div>
                 <div class="grid">
-                    <div class="weekday">日</div>
-                    <div class="weekday">月</div>
-                    <div class="weekday">火</div>
-                    <div class="weekday">水</div>
-                    <div class="weekday">木</div>
-                    <div class="weekday">金</div>
-                    <div class="weekday">土</div>
+                    <div class="weekday">SUN</div>
+                    <div class="weekday">MON</div>
+                    <div class="weekday">TUE</div>
+                    <div class="weekday">WED</div>
+                    <div class="weekday">THU</div>
+                    <div class="weekday">FRI</div>
+                    <div class="weekday">SAT</div>
                     ${dateHtmlParts.join('')}
                 </div>
             </body>
