@@ -40,9 +40,11 @@ module.exports={
         // 時間を ":" で分けて、それぞれを数値として取得
         const [hours, minutes] = inputTime.split(':').map(Number);
 
+        // 1. 安全装置をかけた「finalMinutes」を作る
         const finalMinutes = minutes || 0;
-        // 再び 00:00 形式に変換（ゼロ埋め）
-        const time = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+
+        // 2. ここで「finalMinutes」を使って時間を組み立てる！
+        const time = `${String(hours).padStart(2, '0')}:${String(finalMinutes).padStart(2, '0')}`;
 
         try{
             await db.run(
