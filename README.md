@@ -39,7 +39,7 @@ SQLite を利用した予定管理と、自動リマインド、そして Puppet
 リポジトリをクローンし、依存ライブラリを一括インストールします。
 
 ```bash
-git clone [https://github.com/Akequreru/discord_scheduler_reminder_calendar_bot.git](https://github.com/Akequreru/discord_scheduler_reminder_calendar_bot.git)
+git clone https://github.com/Akequreru/discord_scheduler_reminder_calendar_bot.git
 cd discord_scheduler_reminder_calendar_bot
 npm install
 ```
